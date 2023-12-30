@@ -14,7 +14,7 @@
     "github": "sanjeed5",
     "linkedin": "mohammed-sanjeed",
     "twitter": "sanjeed_i",
-    "instagram": "sanjeed"
+    "instagram": "sanjeed.i"
   },
   "aboutGreeting": "Hi I'm Sanjeed. I'm a PM who codes. I love building. Tinkering with LLMs nowadays.",
   "projects": [
@@ -24,18 +24,23 @@
       "https://www.sanjeed.in/whatsapp-ai-chatbot"
     ],
     [
+      "Terminal on my website",
+      "Yes, this one lol",
+      "https://github.com/sanjeed5/terminal-portfolio"
+    ],
+    [
       "Epic NFTs",
       "Built a site to mint NFTs for fun",
       "https://github.com/sanjeed5/epic-nfts"
     ],
     [
-      "IIT Madras Course Review Website",
+      "IITM Course Reviews",
       "6k+ users used this back in college",
-      "https://resonect.web.app/home"
+      "https://www.sanjeed.in/shipped-a-product-in-2-days--6000-users"
     ],
     [
       "All",
-      "View all of the projects I'm working on.",
+      "View all of the projects.",
       "https://www.sanjeed.in/"
     ]
   ]
