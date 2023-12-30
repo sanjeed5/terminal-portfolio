@@ -74,7 +74,7 @@ const helpObj = {
   "commands": [
     [
     "'about'",
-    "Who is Nader?",
+    "Who is Sanjeed?",
     ],
     [
       "'projects'",
@@ -100,7 +100,7 @@ const helpObj = {
     ],
     [
       "'home'",
-      "Go back to nader.codes."
+      "Go back to sanjeed.in."
     ]
   ],
 }
@@ -117,7 +117,7 @@ const createProject = () : string[] => {
     let link = `<a href="${ele[2]}" target="_blank">${ele[0]}</a>`
     string += SPACE.repeat(2);
     string += link;
-    string += SPACE.repeat(30 - ele[0].length);
+    string += SPACE.repeat(45 - ele[0].length);
     string += ele[1];
     projects.push(string);
     string = '';
@@ -193,14 +193,14 @@ const createAbout = () : string[] => {
   const EMAIL = "Email";
   const GITHUB = "Github";
   const LINKEDIN = "Linkedin";
-  const SUBSTACK = "Substack";
-  const YOUTUBE = 'Youtube';
+  const TWITTER = "Twitter";
+  const INSTAGRAM = 'Instagram';
   
   const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;   
   const github = `<i class='fa-brands fa-github'></i> ${GITHUB}`;
-  const linkedin = `<i style="margin-left:1px;margin-right:-1px;" class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
-  const substack = `<i style="margin-left: 1px; margin-right:2px;"  class='fa-solid fa-bookmark'></i> ${SUBSTACK}`;
-  const youtube = `<i style="margin-right:-2px;" class='fa-brands fa-youtube'></i> ${YOUTUBE}`;
+  const linkedin = `<i style="margin-left:1px;margin-right:2px;" class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
+  const twitter = `<i class='fa-brands fa-x-twitter'></i> ${TWITTER}`;
+  const instagram = `<i style="margin-left:1px;margin-right:1px;" class='fa-brands fa-instagram'></i> ${INSTAGRAM}`;
   let string = "";
 
   about.push("<br>");
@@ -221,16 +221,16 @@ const createAbout = () : string[] => {
 
   string = '';
   string += SPACE.repeat(2);
-  string += substack;
-  string += SPACE.repeat(30 - SUBSTACK.length);  
-  string += `<a target='_blank' href='https://${command.social.substack}.substack.com'>${command.social.substack}.substack.com</a>`;
+  string += twitter;
+  string += SPACE.repeat(30 - TWITTER.length);  
+  string += `<a target='_blank' href='https://www.x.com/${command.social.twitter}'>x.com/${command.social.twitter}</a>`;
   about.push(string);
 
   string = '';
   string += SPACE.repeat(2);
-  string += youtube;
-  string += SPACE.repeat(30 - YOUTUBE.length);  
-  string += `<a target='_blank' href='https://youtube.com/${command.social.youtube}'>youtube/${command.social.youtube}</a>`;
+  string += instagram;
+  string += SPACE.repeat(30 - INSTAGRAM.length);  
+  string += `<a target='_blank' href='https://instagram.com/${command.social.instagram}'>instagram/${command.social.instagram}</a>`;
   about.push(string);
 
   string = '';
