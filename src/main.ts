@@ -21,7 +21,7 @@ const PROMPT = document.getElementById("prompt");
 const COMMANDS = ["help", "about", "projects", "whoami", "repo", "banner", "clear"];
 const REPO_LINK = com.REPO_LINK;
 const HISTORY : string[] = [];
-const SUDO_PASSWORD = "050823"
+const SUDO_PASSWORD = "301223"
 
 const scrollToBottom = () => {
   const MAIN = document.getElementById("main");
@@ -222,9 +222,9 @@ function commandHandler(input : string) {
       }, 500);
       break;
     case 'home':
-      writeLines(["Redirecting to nader.codes...", "<br>"]);
+      writeLines(["Redirecting to sanjeed.in...", "<br>"]);
       setTimeout(() => {
-        window.open('https://nader.codes');
+        window.open('https://sanjeed.in');
       }, 500);
       break;
     case 'rm -rf':
@@ -310,7 +310,7 @@ function revertPasswordChanges() {
 function passwordHandler() {
   if (passwordCounter === 2) {
     if (!INPUT_HIDDEN || !mutWriteLines || !PASSWORD) return
-    writeLines(["<br>", "INCORRECT PASSWORD.", "PERMISSION NOT GRANTED.", "<br>"])
+    writeLines(["<br>", "INCORRECT PASSWORD.", "PERMISSION NOT GRANTED.", "TRY CHECKING CONSOLE.", "<br>"])
     revertPasswordChanges();
     passwordCounter = 0;
     return
@@ -367,7 +367,7 @@ const initEventListeners = () => {
     USERINPUT.focus();
   });
 
-  console.log("%cPassword: 050823", "color: red; font-size: 20px;");
+  console.log("%cPassword: 311223 - 1d", "color: red; font-size: 20px;");
 }
 
 initEventListeners();
