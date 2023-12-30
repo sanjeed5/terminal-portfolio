@@ -1,8 +1,6 @@
-# [WebShell | Terminal Portfolio Website](https://terminal.nader.codes/)
+# [WebShell | Terminal Portfolio Website](https://terminal.sanjeed.in/)
 
-> Forked from [https://github.com/nasan016/webshell](https://github.com/nasan016/webshell)
-
-![terminal.nader.codes](_terminal.png)
+![terminal.sanjeed.in](_terminal.png)
 
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
@@ -30,30 +28,38 @@ Most of the configuration is done in the `config.json` file.
 ```json
 {
   "ascii": [
-    "███╗   ██╗ █████╗ ██████╗ ███████╗██████╗ ",
-    "████╗  ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗",
-    "██╔██╗ ██║███████║██║  ██║█████╗  ██████╔╝",
-    "██║╚██╗██║██╔══██║██║  ██║██╔══╝  ██╔══██╗",
-    "██║ ╚████║██║  ██║██████╔╝███████╗██║  ██║",
-    "╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝ "
-  ],
-  "repoLink": "https://github.com/dabit3/terminal-portfolio",
+  "███████╗ █████╗ ███╗   ██╗     ██╗███████╗███████╗██████╗ ",
+  "██╔════╝██╔══██╗████╗  ██║     ██║██╔════╝██╔════╝██╔══██╗",
+  "███████╗███████║██╔██╗ ██║     ██║█████╗  █████╗  ██║  ██║",
+  "╚════██║██╔══██║██║╚██╗██║██   ██║██╔══╝  ██╔══╝  ██║  ██║",
+  "███████║██║  ██║██║ ╚████║╚█████╔╝███████╗███████╗██████╔╝",
+  "╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚════╝ ╚══════╝╚══════╝╚═════╝"
+],
+
+  "repoLink": "https://github.com/sanjeed5/terminal-portfolio",
   "social": {
-    "email": "dabit3@gmail.com",
-    "github": "dabit3",
-    "linkedin": "naderdabit"
+    "email": "hi@sanjeed.in",
+    "github": "sanjeed5",
+    "linkedin": "mohammed-sanjeed",
+    "twitter": "sanjeed_i",
+    "instagram": "sanjeed.i"
   },
-  "aboutGreeting": "Hi I'm Nader. I'm a full stack product engineer and developer educator.",
+  "aboutGreeting": "Hi I'm Sanjeed. I'm a PM who codes. I love building. Tinkering with LLMs nowadays.",
   "projects": [
     [
-      "React Native AI",
-      "Full stack framework for building cross-platform mobile AI apps.",
-      "https://github.com/dabit3/react-native-ai"
+      "Lilly - Whatsapp AI Chatbot",
+      "Beware: Lilly can be too sarcastic sometimes",
+      "https://www.sanjeed.in/whatsapp-ai-chatbot"
     ],
     [
-      "React Native Elements",
-      "Cross-Platform React Native UI Toolkit.",
-      "https://github.com/react-native-elements/react-native-elements"
+      "Terminal on my website",
+      "Yes, this one lol",
+      "https://github.com/sanjeed5/terminal-portfolio"
+    ],
+    [
+      "All",
+      "View all of the projects I'm working on.",
+      "https://www.sanjeed.in/"
     ]
   ]
 }
