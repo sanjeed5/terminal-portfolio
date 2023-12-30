@@ -13,35 +13,30 @@
     "email": "hi@sanjeed.in",
     "github": "sanjeed5",
     "linkedin": "mohammed-sanjeed",
-    "twitter": "nader",
-    "youtube": "naderdabit"
+    "twitter": "sanjeed_i",
+    "instagram": "sanjeed"
   },
-  "aboutGreeting": "Hi I'm Nader. I'm a full stack product engineer and developer educator.",
+  "aboutGreeting": "Hi I'm Sanjeed. I'm a PM who codes. I love building. Tinkering with LLMs nowadays.",
   "projects": [
     [
-      "React Native AI",
-      "Full stack framework for building cross-platform mobile AI apps.",
-      "https://github.com/dabit3/react-native-ai"
+      "Lilly - Whatsapp AI Chatbot",
+      "Beware: Lilly can be too sarcastic sometimes",
+      "https://www.sanjeed.in/whatsapp-ai-chatbot"
     ],
     [
-      "React Native Elements",
-      "Cross-Platform React Native UI Toolkit.",
-      "https://github.com/react-native-elements/react-native-elements"
+      "Epic NFTs",
+      "Built a site to mint NFTs for fun",
+      "https://github.com/sanjeed5/epic-nfts"
     ],
     [
-      "Pinecone Semantic Search",
-      "Embeds files into vectors, stores on Pinecone, enables semantic search via GPT & Langchain w/Next.js.",
-      "https://github.com/dabit3/semantic-search-nextjs-pinecone-langchain-chatgpt"
-    ],
-    [
-      "Lens Widgets",
-      "Integration widgets for Lens Protocol",
-      "https://github.com/lens-protocol/lens-widgets"
+      "IIT Madras Course Review Website",
+      "6k+ users used this back in college",
+      "https://resonect.web.app/home"
     ],
     [
       "All",
       "View all of the projects I'm working on.",
-      "https://github.com/dabit3"
+      "https://www.sanjeed.in/"
     ]
   ]
 }
