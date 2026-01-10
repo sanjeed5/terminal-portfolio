@@ -81,6 +81,14 @@ const helpObj = {
       "Maybe there's something interesting."
     ],
     [
+      "'skills'",
+      "Tech stack & tools I use."
+    ],
+    [
+      "'music'",
+      "The other side of me."
+    ],
+    [
       "'whoami'",
       "A perplexing question."
     ],
@@ -268,10 +276,48 @@ const createHelp = () : string[] => {
   return help
 }
 
+const createSkills = () : string[] => {
+  const skills : string[] = [];
+  const SPACE = "&nbsp;";
+
+  skills.push("<br>");
+  skills.push("<span class='command'>AI & LLMs</span>");
+  skills.push(SPACE.repeat(2) + "Cursor, LangChain, Ragas, crewAI, smolagents, OpenAI, Claude");
+  skills.push("<br>");
+  skills.push("<span class='command'>Frontend</span>");
+  skills.push(SPACE.repeat(2) + "React, TypeScript, Vite, TailwindCSS");
+  skills.push("<br>");
+  skills.push("<span class='command'>Backend & Infra</span>");
+  skills.push(SPACE.repeat(2) + "Node.js, Python, Firebase, Cloudflare, Docker");
+  skills.push("<br>");
+  skills.push("<span class='command'>Tools</span>");
+  skills.push(SPACE.repeat(2) + "Cursor, Obsidian, Raycast, pnpm, uv, oh-my-zsh");
+  skills.push("<br>");
+
+  return skills;
+}
+
+const createMusic = () : string[] => {
+  const music : string[] = [];
+  const SPACE = "&nbsp;";
+
+  music.push("<br>");
+  music.push("I sing sometimes and have performed with 10+ instruments 🎵");
+  music.push("<br>");
+  music.push(SPACE.repeat(2) + "<i class='fa-brands fa-instagram'></i> Check out my music on <a target='_blank' href='https://instagram.com/sanjeed.i'>Instagram</a>");
+  music.push("<br>");
+  music.push("I also love food — I will literally fly for food ✈️🍜");
+  music.push("<br>");
+
+  return music;
+}
+
 const BANNER = createBanner();
 const DEFAULT = createDefault();
 const HELP = createHelp();
 const ABOUT = createAbout();
 const PROJECTS = createProject();
+const SKILLS = createSkills();
+const MUSIC = createMusic();
 
-export { BANNER, DEFAULT, HELP, ABOUT, PROJECTS, REPO_LINK, createWhoami as WHOAMI } 
+export { BANNER, DEFAULT, HELP, ABOUT, PROJECTS, SKILLS, MUSIC, REPO_LINK, createWhoami as WHOAMI } 

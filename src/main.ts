@@ -18,7 +18,7 @@ const INPUT_HIDDEN = document.getElementById("input-hidden");
 const PASSWORD = document.getElementById("password-input");
 const PASSWORD_INPUT = document.getElementById("password-field") as HTMLInputElement;
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["help", "about", "projects", "whoami", "repo", "banner", "clear"];
+const COMMANDS = ["help", "about", "projects", "skills", "music", "whoami", "repo", "banner", "clear"];
 const REPO_LINK = com.REPO_LINK;
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = "301223"
@@ -214,6 +214,20 @@ function commandHandler(input : string) {
         break;
       }
       writeLines(com.PROJECTS);
+      break;
+    case 'skills':
+      if(bareMode) {
+        writeLines(["Skills? What skills?", "<br>"])
+        break;
+      }
+      writeLines(com.SKILLS);
+      break;
+    case 'music':
+      if(bareMode) {
+        writeLines(["No music for you.", "<br>"])
+        break;
+      }
+      writeLines(com.MUSIC);
       break;
     case 'repo':
       writeLines(["Redirecting to github.com...", "<br>"]);

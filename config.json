@@ -12,36 +12,41 @@
   "social": {
     "email": "hi@sanjeed.in",
     "github": "sanjeed5",
-    "linkedin": "mohammed-sanjeed",
+    "linkedin": "msanjeed",
     "twitter": "sanjeed_i",
     "instagram": "sanjeed.i"
   },
-  "aboutGreeting": "Hi I'm Sanjeed. I'm a PM who codes. I love building. Tinkering with LLMs nowadays.",
+  "aboutGreeting": "Hi, I'm Sanjeed. AI Engineer & Consultant. Community Dev at Cursor. I help build AI agents that actually work. IIT Madras grad, first in my family to go to college.",
   "projects": [
     [
-      "Lilly - Whatsapp AI Chatbot",
-      "Beware: Lilly can be too sarcastic sometimes",
-      "https://www.sanjeed.in/whatsapp-ai-chatbot"
+      "Awesome Cursor Rules MDC",
+      "3000+ GitHub stars",
+      "https://github.com/sanjeed5/awesome-cursor-rules-mdc"
     ],
     [
-      "Terminal on my website",
+      "AI Conversations Simulator",
+      "Reposted by LangChain",
+      "https://github.com/sanjeed5/ai-conversation-simulator"
+    ],
+    [
+      "CoursePal",
+      "6000+ users in college, built in 2 days",
+      "https://www.sanjeed.in/CoursePal---Shipped-product-in-2-days---6000+-users"
+    ],
+    [
+      "Cursor Rules CLI",
+      "CLI tool for managing cursor rules",
+      "https://github.com/sanjeed5/cursor-rules-cli"
+    ],
+    [
+      "Terminal Portfolio",
       "Yes, this one lol",
       "https://github.com/sanjeed5/terminal-portfolio"
     ],
     [
-      "Epic NFTs",
-      "Built a site to mint NFTs for fun",
-      "https://github.com/sanjeed5/epic-nfts"
-    ],
-    [
-      "IITM Course Reviews",
-      "6k+ users used this back in college",
-      "https://www.sanjeed.in/shipped-a-product-in-2-days--6000-users"
-    ],
-    [
-      "All",
-      "View all of the projects.",
-      "https://www.sanjeed.in/"
+      "All Builds",
+      "View all projects",
+      "https://www.sanjeed.in/about#%F0%9F%9B%A0%EF%B8%8F-builds"
     ]
   ]
 }
