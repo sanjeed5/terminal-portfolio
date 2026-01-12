@@ -1,164 +1,125 @@
-import command from '../config.json' assert {type: 'json'};
+import command from '../config.json' with {type: 'json'};
 
 const REPO_LINK = command.repoLink;
 
 const defaultObj = {
   "message": [
-    "<br>",
-    "COMMAND NOT FOUND",
-    "Type <span class='command'>'help'</span> to get started.",
-    "<br>",
+    "",
+    "command not found",
+    "type <span class='command'>help</span> for available commands",
+    "",
   ]
 }
 
 const whoamiObj = {
   "message" : [
     [
-      "In the kaleidoscope of existence,",
-      "I am but a reflection questioning the enigma - "
+      "in the kaleidoscope of existence,",
+      "i am but a reflection questioning the enigma —"
     ],
     [
-      "Amidst cosmic whispers,",
-      "I navigate the maze of self-discovery,",
-      "echoing the eternal refrain - "
+      "amidst cosmic whispers,",
+      "i navigate the maze of self-discovery,",
+      "echoing the eternal refrain —"
     ],
     [
-      "In the symphony of life,",
-      "I am a note inquiring its own melody,",
-      "harmonizing with the universal query - ",
+      "in the symphony of life,",
+      "i am a note inquiring its own melody,",
+      "harmonizing with the universal query —",
     ],
     [
-      "As stardust contemplating its journey,",
-      "I ponder the cosmic query,",
-      "silently asking - ",
+      "as stardust contemplating its journey,",
+      "i ponder the cosmic query,",
+      "silently asking —",
     ],
     [
-      "In the tapestry of reality,",
-      "I am the thread of self-inquiry,",
-      "weaving through the eternal question - "
+      "in the tapestry of reality,",
+      "i am the thread of self-inquiry,",
+      "weaving through the eternal question —"
     ],
     [
-      "In the tapestry of time,",
-      "I weave threads of thought,",
-      "exploring the intricate dance of destiny - ",
+      "in the tapestry of time,",
+      "i weave threads of thought,",
+      "exploring the intricate dance of destiny —",
     ],
     [
-      "Amidst the ocean of stars,",
-      "I sail the vessel of my soul,",
-      "charting courses through celestial dreams - "
+      "amidst the ocean of stars,",
+      "i sail the vessel of my soul,",
+      "charting courses through celestial dreams —"
     ],
     [
-      "Beneath the veil of reality,",
-      "I peer into the abyss of the unknown,",
-      "seeking truths in the shadows of mystery - "
+      "beneath the veil of reality,",
+      "i peer into the abyss of the unknown,",
+      "seeking truths in the shadows of mystery —"
     ],
     [
-      "In the labyrinth of consciousness,",
-      "I wander with purpose,",
-      "deciphering the enigma of my own being - "
+      "in the labyrinth of consciousness,",
+      "i wander with purpose,",
+      "deciphering the enigma of my own being —"
     ],
     [
-      "As a composer of silence,",
-      "I orchestrate the symphony of my thoughts,",
-      "playing the music of the inner self - "
+      "as a composer of silence,",
+      "i orchestrate the symphony of my thoughts,",
+      "playing the music of the inner self —"
     ],
     [
-      "In the garden of the universe,",
-      "I bloom with curiosity,",
-      "nurturing seeds of wisdom in the soil of experience - "
+      "in the garden of the universe,",
+      "i bloom with curiosity,",
+      "nurturing seeds of wisdom in the soil of experience —"
     ]
   ],
 }
 
 const helpObj = {
   "commands": [
-    [
-    "'about'",
-    "Who is Sanjeed?",
-    ],
-    [
-      "'projects'",
-      "Maybe there's something interesting."
-    ],
-    [
-      "'skills'",
-      "Tech stack & tools I use."
-    ],
-    [
-      "'music'",
-      "The other side of me."
-    ],
-    [
-      "'whoami'",
-      "A perplexing question."
-    ],
-    ["'sudo'",
-      "???"
-    ],
-    [
-      "'repo'",
-      "View the Github Repository."
-    ],
-    ["'banner'",
-      "Display the banner."
-    ],
-    [
-      "'clear'",
-      "Clear the terminal."
-    ],
-    [
-      "'home'",
-      "Go back to sanjeed.in."
-    ]
+    ["about", "who is sanjeed?"],
+    ["projects", "things i've built"],
+    ["skills", "tech stack & tools"],
+    ["etc", "everything else"],
+    ["whoami", "a perplexing question"],
+    ["sudo", "???"],
+    ["repo", "view the source code"],
+    ["clear", "clear the terminal"],
+    ["home", "go back to sanjeed.in"]
   ],
 }
 
 const createProject = () : string[] => {
-  let string = "";
   const projects : string[] = [];
-  const files = `${command.projects.length} File(s)`;
-  const SPACE = "&nbsp;";
+  
+  projects.push("");
+  projects.push("<span class='section-title'>projects</span>");
+  projects.push("");
 
-  projects.push("<br>")
-
-  command.projects.forEach((ele) => {
-    let link = `<a href="${ele[2]}" target="_blank">${ele[0]}</a>`
-    string += SPACE.repeat(2);
-    string += link;
-    string += SPACE.repeat(45 - ele[0].length);
-    string += ele[1];
-    projects.push(string);
-    string = '';
+  command.projects.forEach((ele, idx) => {
+    const num = String(idx + 1).padStart(2, '0');
+    let link = `<a href="${ele[2]}" target="_blank">${ele[0]}</a>`;
+    projects.push(`<span class='project-num'>${num}</span>  ${link}`);
+    projects.push(`<span class='project-num'>&nbsp;&nbsp;</span>  <span style="color: var(--text-muted);">${ele[1]}</span>`);
+    if (idx < command.projects.length - 1) projects.push("");
   });
 
-  projects.push("<br>");
-  projects.push(files);
-  projects.push("<br>");
+  projects.push("");
   return projects
 }
 
 const createBanner = () : string[] => {
   const banner : string[] = [];
-  banner.push("<br>")
-  command.ascii.forEach((ele) => {
-    let bannerString = "";
-    //this is for the ascii art
-    for (let i = 0; i < ele.length; i++) {
-      if (ele[i] === " ") {
-        bannerString += "&nbsp;";
-      } else {
-        bannerString += ele[i];
-      }
-    }
-    
-    let eleToPush = `<pre>${bannerString}</pre>`;
-    banner.push(eleToPush);
-  });  
-  banner.push("<br>");
-  banner.push("Welcome to WebShell v1.0.0");
-  banner.push("Type <span class='command'>'help'</span> for a list of all available commands.");
-  // banner.push(`Type <span class='command'>'repo'</span> to view the GitHub repository or click <a href='${command.repoLink}' target='_blank'>here</a>.`);
-  banner.push("<br>");
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+  const dateStr = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  
+  banner.push("");
+  banner.push("<span class='banner-name'>sanjeed</span>");
+  banner.push("<span class='banner-role'>ai engineer & consultant</span>");
+  banner.push("");
+  banner.push(`<span class='banner-meta'>session started · ${dateStr.toLowerCase()} · ${timeStr}</span>`);
+  banner.push("");
+  banner.push("—");
+  banner.push("");
+  banner.push("type <span class='command'>about</span> to learn more");
+  banner.push("type <span class='command'>help</span> for all commands");
+  banner.push("");
   return banner;
 }
 
@@ -172,23 +133,19 @@ const createDefault = () : string[] => {
   return defaultMsg;
 }
 
-/*
-this function will not be assigned to a variable
-it's used to create random whoami messages
-*/
 const createWhoami = () : string[] => {
   const whoami : string[] = [];  
   const r = Math.floor(Math.random() * whoamiObj.message.length);
-  whoami.push("<br>");
+  whoami.push("");
 
   whoamiObj.message[r].forEach((ele, idx) => {
     if (idx === whoamiObj.message[r].length - 1) {
-      ele += "<span class='command'>who am I?</span>";
+      ele += " <span class='command'>who am i?</span>";
     }
     whoami.push(ele);
   })
 
-  whoami.push("<br>");
+  whoami.push("");
 
   return whoami
 }
@@ -196,120 +153,67 @@ const createWhoami = () : string[] => {
 const createAbout = () : string[] => {
   const about : string[] = [];
 
-  const SPACE = "&nbsp;";
-
-  const EMAIL = "Email";
-  const GITHUB = "Github";
-  const LINKEDIN = "Linkedin";
-  const TWITTER = "Twitter";
-  const INSTAGRAM = 'Instagram';
-  
-  const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;   
-  const github = `<i class='fa-brands fa-github'></i> ${GITHUB}`;
-  const linkedin = `<i style="margin-left:1px;margin-right:2px;" class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
-  const twitter = `<i class='fa-brands fa-x-twitter'></i> ${TWITTER}`;
-  const instagram = `<i style="margin-left:1px;margin-right:1px;" class='fa-brands fa-instagram'></i> ${INSTAGRAM}`;
-  let string = "";
-
-  about.push("<br>");
+  about.push("");
+  about.push("<span class='section-title'>about</span>");
+  about.push("");
   about.push(command.aboutGreeting);
-  about.push("<br>");
-  string += SPACE.repeat(2);
-  string += email;
-  string += SPACE.repeat(30 - EMAIL.length);
-  string += `<a target='_blank' href='mailto:${command.social.email}'>${command.social.email}</a>`;
-  about.push(string);
-
-  string = '';
-  string += SPACE.repeat(2);
-  string += github;
-  string += SPACE.repeat(30 - GITHUB.length);
-  string += `<a target='_blank' href='https://github.com/${command.social.github}'>github/${command.social.github}</a>`;
-  about.push(string);
-
-  string = '';
-  string += SPACE.repeat(2);
-  string += twitter;
-  string += SPACE.repeat(30 - TWITTER.length);  
-  string += `<a target='_blank' href='https://www.x.com/${command.social.twitter}'>x.com/${command.social.twitter}</a>`;
-  about.push(string);
-
-  string = '';
-  string += SPACE.repeat(2);
-  string += instagram;
-  string += SPACE.repeat(30 - INSTAGRAM.length);  
-  string += `<a target='_blank' href='https://instagram.com/${command.social.instagram}'>instagram/${command.social.instagram}</a>`;
-  about.push(string);
-
-  string = '';
-  string += SPACE.repeat(2);
-  string += linkedin;
-  string += SPACE.repeat(30 - LINKEDIN.length);  
-  string += `<a target='_blank' href='https://www.linkedin.com/in/${command.social.linkedin}'>linkedin/${command.social.linkedin}</a>`;
-  about.push(string);
-
-  about.push("<br>");
+  about.push("");
+  about.push("<span class='section-title'>connect</span>");
+  about.push("");
+  about.push("<span class='social-label'>email</span>     <a target='_blank' href='mailto:" + command.social.email + "'>" + command.social.email + "</a>");
+  about.push("<span class='social-label'>github</span>    <a target='_blank' href='https://github.com/" + command.social.github + "'>" + command.social.github + "</a>");
+  about.push("<span class='social-label'>twitter</span>   <a target='_blank' href='https://x.com/" + command.social.twitter + "'>" + command.social.twitter + "</a>");
+  about.push("<span class='social-label'>linkedin</span>  <a target='_blank' href='https://linkedin.com/in/" + command.social.linkedin + "'>" + command.social.linkedin + "</a>");
+  about.push("");
+  
   return about
 }
 
 const createHelp = () : string[] => {
   const help : string[] = []
-  help.push("<br>")
+  help.push("")
+  help.push("<span class='section-title'>commands</span>");
+  help.push("")
 
   helpObj.commands.forEach((ele) => {
-    const SPACE = "&nbsp;";
-    let string = "";
-    string += SPACE.repeat(2);
-    string += "<span class='command'>";
-    string += ele[0];
-    string += "</span>";
-    string += SPACE.repeat(30 - ele[0].length);
-    string += ele[1];
-    help.push(string);
+    const padded = ele[0].padEnd(10, ' ').replace(/ /g, '&nbsp;');
+    help.push(`<span class='command'>${padded}</span><span style="color: var(--text-muted);">${ele[1]}</span>`);
   })
 
-  help.push("<br>");
-  help.push("Press <span class='keys'>[Tab]</span> for auto completion.")
-  help.push("Press <span class='keys'>[Esc]</span> to clear the input line.")
-  help.push("Press <span class='keys'>[↑][↓]</span> to scroll through your history of commands.")
-  help.push("<br>")
+  help.push("");
+  help.push("<span class='help-hint'>[tab] autocomplete · [↑↓] history · [esc] clear</span>")
+  help.push("")
   return help
 }
 
 const createSkills = () : string[] => {
   const skills : string[] = [];
-  const SPACE = "&nbsp;";
 
-  skills.push("<br>");
-  skills.push("<span class='command'>AI & LLMs</span>");
-  skills.push(SPACE.repeat(2) + "Cursor, LangChain, Ragas, crewAI, smolagents, OpenAI, Claude");
-  skills.push("<br>");
-  skills.push("<span class='command'>Frontend</span>");
-  skills.push(SPACE.repeat(2) + "React, TypeScript, Vite, TailwindCSS");
-  skills.push("<br>");
-  skills.push("<span class='command'>Backend & Infra</span>");
-  skills.push(SPACE.repeat(2) + "Node.js, Python, Firebase, Cloudflare, Docker");
-  skills.push("<br>");
-  skills.push("<span class='command'>Tools</span>");
-  skills.push(SPACE.repeat(2) + "Cursor, Obsidian, Raycast, pnpm, uv, oh-my-zsh");
-  skills.push("<br>");
+  skills.push("");
+  skills.push("<span class='section-title'>skills</span>");
+  skills.push("");
+  skills.push("<span class='skill-cat'>ai</span>        cursor · langchain · crewai · openai · claude");
+  skills.push("<span class='skill-cat'>frontend</span>   react · typescript · vite · tailwind");
+  skills.push("<span class='skill-cat'>backend</span>    node · python · firebase · cloudflare · docker");
+  skills.push("<span class='skill-cat'>tools</span>      cursor · obsidian · raycast · pnpm · uv");
+  skills.push("");
 
   return skills;
 }
 
-const createMusic = () : string[] => {
-  const music : string[] = [];
-  const SPACE = "&nbsp;";
+const createEtc = () : string[] => {
+  const etc : string[] = [];
 
-  music.push("<br>");
-  music.push("I sing sometimes and have performed with 10+ instruments 🎵");
-  music.push("<br>");
-  music.push(SPACE.repeat(2) + "<i class='fa-brands fa-instagram'></i> Check out my music on <a target='_blank' href='https://instagram.com/sanjeed.i'>Instagram</a>");
-  music.push("<br>");
-  music.push("I also love food — I will literally fly for food ✈️🍜");
-  music.push("<br>");
+  etc.push("");
+  etc.push("<span class='section-title'>etc</span>");
+  etc.push("");
+  etc.push("i sing. performed with 10+ instruments.");
+  etc.push("will literally fly for good food.");
+  etc.push("");
+  etc.push("<span class='social-label'>instagram</span> <a target='_blank' href='https://instagram.com/sanjeed.i'>@sanjeed.i</a>");
+  etc.push("");
 
-  return music;
+  return etc;
 }
 
 const BANNER = createBanner();
@@ -318,6 +222,6 @@ const HELP = createHelp();
 const ABOUT = createAbout();
 const PROJECTS = createProject();
 const SKILLS = createSkills();
-const MUSIC = createMusic();
+const ETC = createEtc();
 
-export { BANNER, DEFAULT, HELP, ABOUT, PROJECTS, SKILLS, MUSIC, REPO_LINK, createWhoami as WHOAMI } 
+export { BANNER, DEFAULT, HELP, ABOUT, PROJECTS, SKILLS, ETC, REPO_LINK, createWhoami as WHOAMI } 

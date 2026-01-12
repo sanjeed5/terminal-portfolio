@@ -3,47 +3,47 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sanjeed</title>
+  <meta name="description" content="AI Engineer & Consultant. Community Dev at Cursor. Building AI agents that work." />
+  <meta name="theme-color" content="#121212" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="sanjeed" />
+  <meta property="og:description" content="AI Engineer & Consultant. Community Dev at Cursor." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/res/banner.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@sanjeed_i" />
+  
+  <link rel="icon" type="image/x-png" href="/res/logo.png" />
   <link rel="stylesheet" href="src/css/css-reset.css">
   <link rel="stylesheet" href="src/css/style.css">
-  <link rel="icon" type="image/x-png" href="/res/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/d5effce557.js" crossorigin="anonymous"></script>
-  <title>WebShell @ sanjeed.in</title>
 </head>
 
 <body>
   <main id="main">
     <div id="bars">
-      <div id="bar-1">WebShell.x64_x86</div>
+      <div id="bar-1">zsh</div>
       <div id="bar-2"></div>
       <div id="bar-3"></div>
       <div id="bar-4"></div>
       <div id="bar-5"></div>
     </div>
-    <br>
     <div id="terminal">
-      <div>
-        <span id="prompt"><span style="color: var(--prompt-1)">guest</span><span
-            style="color: var(--prompt-default)">@</span><span style="color: var(--prompt-2)">sanjeed.in</span><span
-            style="color: var(--prompt-default)">:$ ~</span>
-        </span>
-      </div>
       <!-- command output will be inserted before #write-lines-->
       <a id="write-lines"></a>
     </div>
     <div id="input-line">
       <div>
-        <p id="password-input" style="display: none;">Password: <input id="password-field" autocomplete="off"
+        <p id="password-input" style="display: none;">password: <input id="password-field" autocomplete="off"
             type="password" /></p>
         <p id="input-hidden">
-          <span id="prompt"><span style="color: var(--prompt-1)">guest</span><span
-              style="color: var(--prompt-default)">@</span><span style="color: var(--prompt-2)">sanjeed.in</span><span
-              style="color: var(--prompt-default)">:$ ~</span>
-          </span>
-          <input spellcheck="false" autocomplete="off" id="user-input" />
+          <span id="prompt">→ </span><input spellcheck="false" autocomplete="off" id="user-input" placeholder="type 'help' to begin" />
         </p>
       </div>
-      <br>
     </div>
   </main>
 </body>
